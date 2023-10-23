@@ -5,7 +5,7 @@ using UnityEditor;
 public static class PrefabCreation
 {
     [MenuItem("Assets/Create Mesh Prefab")]
-    public static void CreateStaticAssetMenuItem()
+    public static void CreateMeshPrefabMenuItem()
     {
         Object[] selectedAssets = Selection.GetFiltered(typeof(Object), SelectionMode.Assets);
         CreateMeshPrefab(selectedAssets[0]);
