@@ -352,7 +352,7 @@ class MainView(QMainWindow):
 
 ### DPI Scaling
 
-On high DPI monitors Maya's UI can appear very small. It can be scaled up via **Preferences > Interface > Interface Scaling**. This scales up Maya's internal UIs, but it will not scale a custom user created UIs. The Qt functions for auto-scaling don't work at present in Maya 2023 🙁. This is a major pain, and something I hope Autodesk remedies. The following code in **main_view.py** is basic functionality for scaling up the UI. You may run into situations where it isn't perfect and needs  adjusting:
+On high DPI monitors Maya's UI can appear very small. It can be scaled up via **Preferences > Interface > Interface Scaling**. This scales up Maya's internal UIs, but it will not scale custom user created UIs. The Qt functions for auto-scaling don't work at present in Maya 2023 🙁. This is a major pain, and something I hope Autodesk remedies. The following code in **main_view.py** is basic functionality for scaling up the UI. You may run into situations where it isn't perfect and needs  adjusting:
 
 **[main_view.py](PyCharmProject/art_pipeline/maya/maya_pipeline/main_app/main_view.py)**
 ```python
@@ -402,16 +402,16 @@ The asset creation approach entails:
 1. Check that a Parent Folder has been selected and an asset name has been entered.
 2. Save any changes to any currently open scene.
 3. Based on what type of asset is being created, prompt the user to choose to import or reference other assets:
-    - Mesh
-        - The file is simply created
-    - Skeleton
-        - A prompt asks the user if they want to reference a mesh to aid with laying out the skeleton.
-    - Skinned Mesh
-        - A prompt asks to import a skeleton and import a mesh.
-    - Rig
-        - A prompt asks to import a skinned mesh
-    - Animation
-        - A prompt asks to reference a rig
+   - Mesh
+      - The file is simply created
+   - Skeleton
+      - A prompt asks the user if they want to reference a mesh to aid with laying out the skeleton.
+   - Skinned Mesh
+      - A prompt asks to import a skeleton and import a mesh.
+   - Rig
+      - A prompt asks to import a skinned mesh
+   - Animation
+      - A prompt asks to reference a rig
 
 ```python
 # Prompt user to choose to import or ref other assets based on what type of asset they are creating
