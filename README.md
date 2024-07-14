@@ -28,7 +28,14 @@ The Maya Pipeline Workspace Control uses a Model View Controller pattern describ
 
 ## Main App
 
-The entry point for the `MayaPipeline` object inside `main_app.py` is the function `def open_mp(title: str, mode: mp.UI_Creation_Mode)`. The default way a user should launch the UI is like this:
+The entry point for the `MayaPipeline` object inside `main_app.py` is the function:
+
+**[main_app.py](PyCharmProject/art_pipeline/maya/maya_pipeline/main_app/main_app.py)**
+```python
+def open_mp(title: str, mode: mp.UI_Creation_Mode) 
+```
+
+The default way a user should launch the UI from Maya is like this:
 
 ```python
 import userSetup
@@ -55,8 +62,6 @@ mp.open_mp("Maya Pipeline", mp.UI_Creation_Mode.RECREATE)
 ```
 
 The `mp.open_mp` function creates a MayaPipeline object like so:
-
-**[main_app.py](PyCharmProject/art_pipeline/maya/maya_pipeline/main_app/main_app.py)**
 ```python
 class MayaPipeline:
     def __init__(self, title: str, mode: mp.UI_Creation_Mode):
