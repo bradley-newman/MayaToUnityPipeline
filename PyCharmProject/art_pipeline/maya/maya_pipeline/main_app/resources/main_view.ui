@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>385</width>
+    <height>762</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="central_widget_verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="currentAssetTypeHeaderLabel">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Current Asset Type:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="currentAssetTypeLabel">
+        <property name="text">
+         <string>&lt;NONE&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="createTab">
+       <attribute name="title">
+        <string>Create</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="assetTypeLayout">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignLeft">
+           <widget class="QLabel" name="assetTypeLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Asset Type</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="assetTypeComboBox">
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Mesh</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Skeleton</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SkinnedMesh</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Rig</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Animation</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QTreeWidget" name="assetParentFolderTreeWidget">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Asset Parent Folders</string>
+           </property>
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </column>
+          <item>
+           <property name="text">
+            <string>Characters</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Environment</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Items</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Props</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Structures</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Vehicles</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="assetNameLayout">
+          <property name="bottomMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="assetNameLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <property name="text">
+             <string>Asset Name</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="assetNameLineEdit">
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="createAssetLayout">
+          <property name="bottomMargin">
+           <number>100</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="createAssetButton">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Create Asset</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>385</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="editMenu">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="settingsAction"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="exportAction"/>
+    <addaction name="exportToCustomLocationAction"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="editMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="settingsAction">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="exportAction">
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="exportToCustomLocationAction">
+   <property name="text">
+    <string>Export to Custom Location</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>assetNameLineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>createAssetButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>202</x>
+     <y>290</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

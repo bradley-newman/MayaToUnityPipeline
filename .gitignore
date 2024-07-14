@@ -1,0 +1,25 @@
+MayaProject/
+
+# Maya
+/images/outUV.bmp
+*.mayaSwatches
+*.swatch
+*.swatches
+*.png_hcm.swatch
+*.psd_hcm.swatch
+/.mayaSwatches/
+/data/tmp/
+*.tx
+*.iff
+
+# Python ---------------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+*$py.class
+
+PyCharmProject/testing/
+PyCharmProject/art_pipeline/maya/maya_pipeline/mp_logging/logs/*
+PyCharmProject/art_pipeline/maya/test.py
+PyCharmProject/art_pipeline/maya/maya_pipeline/settings/Settings.json
